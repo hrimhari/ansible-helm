@@ -26,7 +26,9 @@ Example Playbook
 ```yaml
 - hosts: localhost
   roles:
-    - { role: devoperate.helm, helm_version: '0.11.11' }
+    - role: devoperate.helm
+      vars:
+        helm_version: '2.12.3'
 ```
 
 License
