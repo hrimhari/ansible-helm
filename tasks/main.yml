@@ -1,0 +1,11 @@
+---
+- name: Check for existing Helm installation
+  command: helm --help
+  changed_when: no
+  failed_when: no
+  register: helm_check_result
+
+- name: Include Helm installtion tasks
+  become: yes
+  include_tasks: install.yml
+  when: helm_check_result.rc != 0
