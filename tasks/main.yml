@@ -1,11 +1,18 @@
 ---
 - name: Check for existing Helm installation
-  command: helm --help
+  stat:
+    path: /usr/local/bin/helm
+  register: stat_helm_result
+
+- name: Check Helm version
+  command: helm version
   changed_when: no
   failed_when: no
-  register: helm_check_result
+  register: helm_version_result
+  when: stat_helm_result.stat.exists
 
 - name: Include Helm installtion tasks
   become: yes
   include_tasks: install.yml
-  when: helm_check_result.rc != 0
+  when: not stat_helm_result.stat.exists or
+        helm_version_result.stdout_lines | first | regex_search('[0-9]+\\.[0-9]+\\.[0-9]+') != helm_version
