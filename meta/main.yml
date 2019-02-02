@@ -25,21 +25,21 @@ galaxy_info:
         - all
 
   galaxy_tags:
-    - helm
     - development
     - packaging
+    - helm
+    - kubernetes
     - cloud
     - container
     - docker
+    - devops
     - ubuntu
     - debian
     - centos
     - alpine
     - fedora
-    - kubernetes
     - ci
     - cd
-    - devops
 
 dependencies:
   - src: devoperate.archive_utils
