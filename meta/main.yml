@@ -26,6 +26,16 @@ galaxy_info:
 
   galaxy_tags:
     - helm
+    - development
+    - packaging
+    - cloud
+    - container
+    - docker
+    - ubuntu
+    - debian
+    - centos
+    - alpine
+    - fedora
     - kubernetes
     - ci
     - cd
