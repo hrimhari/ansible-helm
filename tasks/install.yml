@@ -20,11 +20,13 @@
 
 - name: Unpack Helm dist archive
   unarchive:
+    remote_src: yes
     src: '{{ helm_tempdir.path }}/helm-v{{ helm_version }}-linux-amd64.tar.gz'
     dest: '{{ helm_tempdir.path }}/'
 
 - name: Install Helm binary
   copy:
+    remote_src: yes
     src: '{{ helm_tempdir.path }}/linux-amd64/helm'
     dest: /usr/local/bin/helm
     mode: 0755
