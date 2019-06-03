@@ -44,4 +44,4 @@ galaxy_info:
 
 dependencies:
   - src: devoperate.archive_utils
-    version: v0.1.1
+    version: v0.1.2
