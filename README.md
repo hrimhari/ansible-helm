@@ -1,7 +1,7 @@
 helm
 =========
 
-[![pipeline status](https://gitlab.com/devoperate/ansible-helm/badges/master/pipeline.svg)](https://gitlab.com/devoperate/ansible-helm/commits/master)
+[![Build Status](https://travis-ci.org/devoperate/ansible-helm.svg?branch=master)](https://travis-ci.org/devoperate/ansible-helm)
 
 Installs a desired release of Kubernetes Helm on Linux.
 
@@ -28,7 +28,7 @@ Example Playbook
   roles:
     - role: devoperate.helm
       vars:
-        helm_version: '2.12.3'
+        helm_version: "2.14.0"
 ```
 
 License
@@ -39,4 +39,4 @@ See LICENSE.
 Author Information
 ------------------
 
-- [Claude Léveillé](https://claude-leveille.com)
+- [Claude Léveillé](https://cleveille.com)
