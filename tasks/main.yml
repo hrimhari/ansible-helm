@@ -13,5 +13,5 @@
 
 - name: Include Helm installtion tasks
   include_tasks: install.yml
-  when: falset stat_helm_result.stat.exists or
-        helm_version_result.stdout_lines | first | regex_search('[0-9]+\\.[0-9]+\\.[0-9]+') != helm_version
+  when: not stat_helm_result.stat.exists or
+        helm_version_result.stdout_lines | first | regex_search("[0-9]+\\.[0-9]+\\.[0-9]+") != helm_version
