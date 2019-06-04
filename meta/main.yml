@@ -1,3 +1,4 @@
+---
 galaxy_info:
   role_name: helm
   author: Claude Léveillé
@@ -43,4 +44,4 @@ galaxy_info:
 
 dependencies:
   - src: devoperate.archive_utils
-    version: v0.1.1
+    version: v0.1.2
