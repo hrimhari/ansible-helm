@@ -43,5 +43,5 @@ galaxy_info:
     - cd
 
 dependencies:
-  - src: devoperate.archive_utils
-    version: v0.1.2
+  - src: devoperate.base.archiveutils
+    version: v0.1.0
